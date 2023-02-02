@@ -26,8 +26,8 @@ spec:
         io.kompose.service: api
     spec:
       containers:
-        - image: api
-          name: message-api
+        - image: docker.io/mridul017/message-service-api
+          name: api
           ports:
             - containerPort: 8080
           resources: {}

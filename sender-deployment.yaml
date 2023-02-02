@@ -28,7 +28,7 @@ spec:
         - env:
             - name: AMQP_SERVER_URL
               value: amqp://guest:guest@message-broker:5672/
-          image: sender
+          image: docker.io/mridul017/message-service-sender
           name: sender
           ports:
             - containerPort: 3000

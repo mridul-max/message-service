@@ -30,7 +30,7 @@ spec:
               value: amqp://guest:guest@message-broker:5672/
             - name: SENDGRID_API_KEY
               value: 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
-          image: consumer
+          image: docker.io/mridul017/message-service-consumer
           name: consumer
           resources: {}
       restartPolicy: Always

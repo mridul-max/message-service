@@ -37,8 +37,8 @@ spec:
               value: secret
             - name: MYSQL_USER
               value: tester
-          image: db
-          name: message-db
+          image: mridul017/message-service-db
+          name: db
           ports:
             - containerPort: 3306
           resources: {}
