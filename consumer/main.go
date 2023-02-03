@@ -33,7 +33,7 @@ type MessageDB struct {
 
 func main() {
 	// Define RabbitMQ server URL.
-	amqpServerURL := os.Getenv("AMQP_SERVER_URL")
+	amqpServerURL := "amqp://guest:guest@message-broker:5672/"
 	// Create a new RabbitMQ connection.
 	connectRabbitMQ, err := amqp.Dial(amqpServerURL)
 	if err != nil {

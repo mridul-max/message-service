@@ -2,12 +2,10 @@ package main
 
 import (
 	"encoding/json"
-	"log"
-	"os"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/streadway/amqp"
+	"log"
 )
 
 type MessagePayload struct {
@@ -22,7 +20,7 @@ type Recipient struct {
 
 func main() {
 	// Define RabbitMQ server URL.
-	amqpServerURL := os.Getenv("AMQP_SERVER_URL")
+	amqpServerURL := "amqp://guest:guest@message-broker:5672/"
 
 	// Create a new RabbitMQ connection.
 	connectRabbitMQ, err := amqp.Dial(amqpServerURL)
